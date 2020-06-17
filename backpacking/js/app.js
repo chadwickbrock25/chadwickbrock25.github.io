@@ -4,18 +4,21 @@ const baseURL = "http://api.openweathermap.org/data/2.5/weather?"
 let $dateQuery = $("#date").val()
 const apiKey = "&APPID=ab680529730b171d229d833b949afad3"
 const queryType = "q="
-let $cityQuery = $('input[type="text"]').val()
+let $cityQuery = $("location").val()
 let queryURL = baseURL + queryType 
 
 // api.openweathermap.org/data/2.5/weather?id={city id}&appid={your api key}
+$("#container").css("opacity", "0")
 const getCity = () => {
     $.ajax({
         url: queryURL + $cityQuery + apiKey
     }).then((weatherData) => {
         console.log(weatherData.main)
+        $("#container").css("opacity", "1")
+//when recalculating temp divide by 4        
         $("#container").html(`
-        <thead><tr><th>Temp</th><td>${weatherData.main.temp}</td></tr></thead>
-        <tbody><tr><th>Humidity</th><td>${weatherData.main.humidity}</td></tr></tbody>
+        <table><thead><tr><th>Temperature</th><td>${weatherData.main.temp}</td></tr></thead>
+        <tbody><tr><th>Humidity</th><td>${weatherData.main.humidity}</td></tr></tbody></table>
         `)
     }), (error) => {
         console.log(error)
@@ -26,7 +29,7 @@ $( () => {
     
     $('form').on('submit', (event) => {
         event.preventDefault()
-        $cityQuery = $('input[type="text"]').val()
+        $cityQuery = $('#location').val()
         getCity()
     })
 });
