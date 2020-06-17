@@ -30,10 +30,13 @@ table {
 }
 table, th, td {
     border: 1px solid white;
+    text-align: center;
+    table-layout: auto;
 }
 .container {
     background-color: chartreuse;
 }
 #container {
+    width: 100%;
     background-color: crimson;
 }

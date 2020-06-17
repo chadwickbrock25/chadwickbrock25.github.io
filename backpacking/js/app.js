@@ -13,9 +13,11 @@ $( () => {
         $.ajax({
             url: queryURL
         }).then((weatherData) => {
-            $(".container").html('
-            <h2>' ${weatherData.temp} </h2>
-            ')
+            console.log(weatherData.main)
+            $("#container").html(`
+            <thead><tr><th>Temp</th><td>${weatherData.main.temp}</td></tr></thead>
+            <tbody><tr><th>Humidity</th><td>${weatherData.main.humidity}</td></tr></tbody>
+            `)
         }), (error) => {
             console.log(error)
         }
