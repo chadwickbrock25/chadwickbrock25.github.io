@@ -4,9 +4,13 @@
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?"
 const apiKey = "&APPID=ab680529730b171d229d833b949afad3"
 const queryType = "q="
+const arrHot = ["If you want to include fresh food on the trail such as fruits and vegetables, eat it earlier in the trip (to lighten your load and prevent it from wilting or spoiling)"]
+const arrCold = ["To stay warm, think of taking “just-add-water” meals that do not take much time to cook or clean up after. These are some good choices for hot meals on cold weather hikes"]
 let $cityQuery = $("location").val()
 let $dateQuery = $("#date").val()
 let queryURL = baseURL + queryType 
+
+
 
 // API Call ex.
 // api.openweathermap.org/data/2.5/weather?id={city id}&appid={your api key}
@@ -21,16 +25,28 @@ const getCity = () => {
         url: queryURL + $cityQuery + apiKey
     }).then((weatherData) => {
         console.log(weatherData)
-        // let num = weatherData.main.temp
-        // tempF = Math.ceil((weatherData.main.temp)/4)
-        // console.log(tempF)
+        let temp = weatherData.main.temp
+        tempF = Math.ceil((weatherData.main.temp)/4)
+        console.log(tempF)
         //?Ask why tempF can't be read in append below?
-        $("#container").html(`
+
+        if(temp < 280) {
+            $("#container").html(`
             <h5>${weatherData.name}</h5>
             <table><thead><tr><th>Temperature</th><td>
-            ${weatherData.main.temp}</td></tr></thead>
+            ${tempF}</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>
-            ${weatherData.main.humidity}</td></tr></tbody></table>
+            ${weatherData.main.humidity}</td></tr></tbody>
+            <tfoot><tr><th>Recommendation</th><td>${arrCold}</td></tr></tfoot></table>
+        `)
+        } else if (temp > 280)
+            $("#container").html(`
+            <h5>${weatherData.name}</h5>
+            <table><thead><tr><th>Temperature</th><td>
+            ${tempF}</td></tr></thead>
+            <tbody><tr><th>Humidity</th><td>
+            ${weatherData.main.humidity}</td></tr></tbody>
+            <tfoot><tr><th>Recommendation</th><td>${arrHot}</td></tr></tfoot></table>
         `)
         $("#container").css("opacity", "1")
     }), (error) => {

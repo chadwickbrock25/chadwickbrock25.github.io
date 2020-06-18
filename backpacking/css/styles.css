@@ -4,7 +4,7 @@ body {
     text-align: center;
 }
 h1{
-    color: blue;
+    color: crimson;
     border: 1px solid blue;
     border-left: solid;
     border-radius: 60%;
@@ -15,8 +15,8 @@ h1{
 
 /* Location city input div */
 .container {
-    background-color: chartreuse;
-    border: 3px solid crimson;
+    background-color: blue;
+    border: 3px solid orange;
     max-width: 250px;
     margin: auto;
 
@@ -27,15 +27,18 @@ label {
 }label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
+    color: white;
 
 }
 
 /* Weather table div */
 #container {
-    background-color: crimson;
-    border: 3px solid chartreuse;
+    background-color: orange;
+    border: 3px solid blue;
     margin: .4rem 0;
-
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }h5 {
     color: white;
     margin-bottom: 0%;
