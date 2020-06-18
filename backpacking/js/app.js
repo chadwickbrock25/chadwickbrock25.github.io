@@ -4,16 +4,22 @@
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?"
 const apiKey = "&APPID=ab680529730b171d229d833b949afad3"
 const queryType = "q="
-const arrHot = ["If you want to include fresh food on the trail such as fruits and vegetables, eat it earlier in the trip (to lighten your load and prevent it from wilting or spoiling)"]
-const arrCold = ["To stay warm, think of taking “just-add-water” meals that do not take much time to cook or clean up after. These are some good choices for hot meals on cold weather hikes"]
 let $cityQuery = $("location").val()
 let $dateQuery = $("#date").val()
 let queryURL = baseURL + queryType 
 
-
-
 // API Call ex.
 // api.openweathermap.org/data/2.5/weather?id={city id}&appid={your api key}
+
+/////////////////////////////////
+//Food & Clothes Recommendations
+/////////////////////////////////
+const foodHot = ["If you want to include fresh food on the trail such as fruits and vegetables, eat it earlier in the trip (to lighten your load and prevent it from wilting or spoiling)"]
+const foodCold = ["To stay warm, think of taking “just-add-water” meals that do not take much time to cook or clean up after. These are some good choices for hot meals on cold weather hikes"]
+const clothHot = ["Lose the midlayer today & lighten up your base. Shorts will be more comfortable."]
+const clothCold = ["Make sure to keep your midlayer then cover your hadns & head."]
+
+
 
 /////////////////////////////////
 //Weather query inputing city FUNCTION
@@ -37,7 +43,7 @@ const getCity = () => {
             ${tempF}</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>
             ${weatherData.main.humidity}</td></tr></tbody>
-            <tfoot><tr><th>Recommendation</th><td>${arrCold}</td></tr></tfoot></table>
+            <tfoot><tr><th>Recommendation<br>Food & Clothes</th><td>${foodCold}</td><td>${clothCold}</td></tr></tfoot></table>
         `)
         } else if (temp > 280)
             $("#container").html(`
@@ -46,7 +52,7 @@ const getCity = () => {
             ${tempF}</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>
             ${weatherData.main.humidity}</td></tr></tbody>
-            <tfoot><tr><th>Recommendation</th><td>${arrHot}</td></tr></tfoot></table>
+            <tfoot><tr><th>Recommendation<br>Food & Clothes</th><td>${foodHot}</td><td>${clothHot}</td></tr></tfoot></table>
         `)
         $("#container").css("opacity", "1")
     }), (error) => {
