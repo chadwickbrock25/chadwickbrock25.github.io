@@ -21,9 +21,9 @@ const getCity = () => {
         url: queryURL + $cityQuery + apiKey
     }).then((weatherData) => {
         console.log(weatherData)
-        let num = weatherData.main.temp
-        tempF = Math.ceil((weatherData.main.temp)/4)
-        console.log(tempF)
+        // let num = weatherData.main.temp
+        // tempF = Math.ceil((weatherData.main.temp)/4)
+        // console.log(tempF)
         //?Ask why tempF can't be read in append below?
         $("#container").html(`
             <h5>${weatherData.name}</h5>
