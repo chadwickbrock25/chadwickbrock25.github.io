@@ -1,7 +1,7 @@
 /////////////////////////////////
 //Varibles
 /////////////////////////////////
-const baseURL = "http://api.openweathermap.org/data/2.5/weather?"
+const baseURL = "https://api.openweathermap.org/data/2.5/weather?"
 const apiKey = "&APPID=ab680529730b171d229d833b949afad3"
 const queryType = "q="
 let $cityQuery = $("location").val()
