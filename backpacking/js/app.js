@@ -17,7 +17,7 @@ let queryURL = baseURL + queryType
 const foodHot = ["If you want to include fresh food on the trail such as fruits and vegetables, eat it earlier in the trip (to lighten your load and prevent it from wilting or spoiling)"]
 const foodCold = ["To stay warm, think of taking “just-add-water” meals that do not take much time to cook or clean up after. These are some good choices for hot meals on cold weather hikes"]
 const clothHot = ["Lose the midlayer today & lighten up your base. Shorts will be more comfortable."]
-const clothCold = ["Make sure to keep your midlayer then cover your hadns & head."]
+const clothCold = ["Make sure to keep your midlayer then cover your hands & head."]
 
 
 
