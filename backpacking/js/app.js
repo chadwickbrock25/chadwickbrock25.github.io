@@ -34,7 +34,6 @@ const getCity = () => {
         let temp = weatherData.main.temp
         tempF = Math.ceil((weatherData.main.temp)/4)
         console.log(tempF)
-        //?Ask why tempF can't be read in append below?
 
         if(temp < 280) {
             $("#container").html(`
@@ -59,14 +58,15 @@ const getCity = () => {
         console.log(error)
     }
 }
+ //Listener for user input city
+ $('form').on('submit', (event) => {
+    event.preventDefault()
+    $cityQuery = $('#location').val()
+    getCity()
+})
 
 $( () => {
-    //Listener for user input city
-    $('form').on('submit', (event) => {
-        event.preventDefault()
-        $cityQuery = $('#location').val()
-        getCity()
-    })
+   
 });//?Ask why object troubles listener?
 // const EventHandlers = {
 //     //Listener for user input city
