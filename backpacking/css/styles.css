@@ -1,3 +1,8 @@
+/* Header/Universial */
+body {
+    background-color: #c7c0f9;
+    text-align: center;
+}
 h1{
     color: blue;
     border: 1px solid blue;
@@ -6,44 +11,44 @@ h1{
     text-align: center;
     background-color: cornflowerblue;
     z-index: 1;
-}label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
 }
 
-input,
-label {
-    margin: .4rem 0;
-}
-  
-body {
-    background-color: #c7c0f9;
-    text-align: center;
-}
-h5 {
-    color: white;
-    margin-top: auto;
-}
-li {
-    list-style-type: none;
-}
- thead, tbody, tr, th, td {
-    border: 1px solid white;
-    text-align: center;
-    margin: auto;
-}
-table {
-    margin: auto;
-}
+/* Location city input div */
 .container {
     background-color: chartreuse;
     border: 3px solid crimson;
     max-width: 250px;
     margin: auto;
+
+}input,
+label {
+    margin: .4rem 0;
+
+}label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+
 }
+
+/* Weather table div */
 #container {
     background-color: crimson;
     border: 3px solid chartreuse;
     margin: .4rem 0;
+
+}h5 {
+    color: white;
+    margin-bottom: 0%;
+
+}table {
+    margin: 0 auto;
+
+} thead, tbody, tr, th, td {
+    border: 1px solid white;
+
+}
+
+/* Not needed yet */
+li {
     list-style-type: none;
 }
