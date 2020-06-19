@@ -10,7 +10,7 @@
     <h1>Backpack Planning</h1>
     <div class="container">
         <form action="/action_page.php">
-            <label for="Location"><h1>Where to?:</h1></label>
+            <label for="City"><h1>Where to?:</h1></label>
             <input type="text" id="location" name="location">
             <h5>ex. Atlanta,US (city, country initial)</h5>
             <input type="submit" value="Check Weather" id="weather-btn">
@@ -34,20 +34,23 @@
           <button type="button" name="button" id="equip-button">Add Equipment</button>
           <label for="input-box"></label>
           <input type="text" name="" value="" id="input-box">
-          
-         
         </div>
         <!--       Container for both lists -->
         <div id="lists">
           <!--         left list, things added should have a class of `to-do-item` to get the css -->
-          <div id="to-do-list">
-            <h2>Things to Do</h2>
-            <ul id="todo"></ul>
+          <div id="food">
+            <h2>Food</h2>
+            <ul id="food_list"></ul>
           </div>
           <!--         right list, things added should have a class of `completed` -->
-          <div id="completed">
-            <h2>Things That are Done</h2>
-            <ul id="complist"></ul>
+          <div id="clothes">
+            <h2>Clothes</h2>
+            <ul id="cloth_list"></ul>
+          </div>
+          <!--         right list, things added should have a class of `equipment` -->
+          <div id="equipment">
+            <h2>Equipment</h2>
+            <ul id="equip_list"></ul>
           </div>
         </div>
       </div>
