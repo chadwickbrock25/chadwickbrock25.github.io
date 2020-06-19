@@ -7,54 +7,61 @@
     <title>Backpack Planning</title>
 </head>
 <body>
-    <h1>Backpack Planning</h1>
-    <div class="container">
-        <form action="/action_page.php">
-            <label for="City"><h1>Where to?:</h1></label>
-            <input type="text" id="location" name="location">
-            <h5>ex. Atlanta,US (city, country initial)</h5>
-            <input type="submit" value="Check Weather" id="weather-btn">
-            <!-- button to submit location & dates to weather api// -->
-            <!-- <label for="date">Date:</label>//Not working on this API// -->
-            <!-- <input type="date" id="date" name="trip-start"
-                value="2020-04-25"
-                min="2020-01-01" max="2021-12-31"><br><br> -->
-          </form>
-    </div>
-<!-- weather table results -->
-    <div id="container"></div>
+    <!-- <img src="backpack_bg.jpg"> -->
+    <nav>
+        <h1>Backpack Planning</h1>
+    </nav>
+    <div class="BG_contain">
+        
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="City"><h1>Where to?:</h1></label>
+                <input type="text" id="location" name="location">
+                <h5>ex. Atlanta,US (city, country initial)</h5>
+                <input type="submit" value="Check Weather" id="weather-btn">
+                <!-- button to submit location & dates to weather api// -->
+                <!-- <label for="date">Date:</label>//Not working on this API// -->
+                <!-- <input type="date" id="date" name="trip-start"
+                    value="2020-04-25"
+                    min="2020-01-01" max="2021-12-31"><br><br> -->
+            </form>
+        </div>
+    <!-- weather table results -->
+        <div id="container"></div>
 
-<!-- Food & clothes lists -->
-    <div id="container">
-        <h1>What're you bringing?</h1>
-        <div id="input-container">
-          <!--         input and input button -->
-          <button type="button" name="button" id="food-button">Add Food</button>
-          <button type="button" name="button" id="cloth-button">Add Clothes</button>
-          <button type="button" name="button" id="equip-button">Add Equipment</button>
-          <label for="input-box"></label>
-          <input type="text" name="" value="" id="input-box">
+    <!-- Food & clothes lists -->
+        <div id="container">
+            <h1>What're you bringing?</h1>
+            <div id="input-container">
+            <!--         input and input button -->
+            <button type="button" name="button" id="food-button">Add Food</button>
+            <button type="button" name="button" id="cloth-button">Add Clothes</button>
+            <button type="button" name="button" id="equip-button">Add Equipment</button>
+            <label for="input-box"></label>
+            <input type="text" name="" value="" id="input-box">
+            </div>
+            <!--       Container for both lists -->
+            <div id="lists">
+            <!--         left list, things added should have a class of `to-do-item` to get the css -->
+            <div id="food">
+                <h2>Food</h2>
+                <ul id="food_list"></ul>
+            </div>
+            <!--         right list, things added should have a class of `completed` -->
+            <div id="clothes">
+                <h2>Clothes</h2>
+                <ul id="cloth_list"></ul>
+            </div>
+            <!--         right list, things added should have a class of `equipment` -->
+            <div id="equipment">
+                <h2>Equipment</h2>
+                <ul id="equip_list"></ul>
+            </div>
+            </div>
         </div>
-        <!--       Container for both lists -->
-        <div id="lists">
-          <!--         left list, things added should have a class of `to-do-item` to get the css -->
-          <div id="food">
-            <h2>Food</h2>
-            <ul id="food_list"></ul>
-          </div>
-          <!--         right list, things added should have a class of `completed` -->
-          <div id="clothes">
-            <h2>Clothes</h2>
-            <ul id="cloth_list"></ul>
-          </div>
-          <!--         right list, things added should have a class of `equipment` -->
-          <div id="equipment">
-            <h2>Equipment</h2>
-            <ul id="equip_list"></ul>
-          </div>
-        </div>
-      </div>
+    </div>
 </body>
+<!-- <link rel="stylesheet" href="css/styles.css"> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
 <script src="js/app.js" type="text/JavaScript" charset="utf-8"></script>
 </html>

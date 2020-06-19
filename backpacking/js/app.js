@@ -37,7 +37,7 @@ const getCity = () => {
 
         if(temp < 280) {
             $("#container").html(`
-            <h5>${weatherData.name}</h5>
+            <h3>${weatherData.name}</h3>
             <table><thead><tr><th>Temperature</th><td>
             ${tempF}</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>

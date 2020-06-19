@@ -1,12 +1,24 @@
 /* Header/Universial */
 body {
-    background-color: #23e9ff;
+    background-color: #ffffff;
     text-align: center;
+    background: url(backpack_bg.jpg);
+    background-size: cover;
+
+
+} .BG_contain {
+    background-color:  #ffffff6d;
+    max-width: 750px;
+    margin: auto;
+} img {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
 }
 h1{
     color: crimson;
     border: 1px solid blue;
-    border-left: solid;
+    /* border-left: solid; */
     border-radius: 60%;
     text-align: center;
     background-color: cornflowerblue;
@@ -29,12 +41,18 @@ label {
     font: 1rem 'Fira Sans', sans-serif;
     color: white;
 
+} h3 {
+    font-size: 125%;
+    margin-bottom: 0 auto;
+    color: white;
+/* font only changes the 2nd time user searches */
 }
 
 /* Weather table div */
 #container {
-    background-color: orange;
-    border: 3px solid blue;
+    /* background: url(backpack_BG2.HEIC); */
+    /* background-color: orange;
+    border: 3px solid blue; */
     margin: .4rem 0;
     max-width: 500px;
     margin-left: auto;
