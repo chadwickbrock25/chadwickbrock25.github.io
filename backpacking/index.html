@@ -10,10 +10,10 @@
     <h1>Backpack Planning</h1>
     <div class="container">
         <form action="/action_page.php">
-            <label for="Location">Where to?:</label>
+            <label for="Location"><h1>Where to?:</h1></label>
             <input type="text" id="location" name="location">
             <h5>ex. Atlanta,US (city, country initial)</h5>
-            <input type="submit" value="Check Weather">
+            <input type="submit" value="Check Weather" id="weather-btn">
             <!-- button to submit location & dates to weather api// -->
             <!-- <label for="date">Date:</label>//Not working on this API// -->
             <!-- <input type="date" id="date" name="trip-start"
@@ -21,9 +21,36 @@
                 min="2020-01-01" max="2021-12-31"><br><br> -->
           </form>
     </div>
-
+<!-- weather table results -->
     <div id="container"></div>
 
+<!-- Food & clothes lists -->
+    <div id="container">
+        <h1>What're you bringing?</h1>
+        <div id="input-container">
+          <!--         input and input button -->
+          <button type="button" name="button" id="food-button">Add Food</button>
+          <button type="button" name="button" id="cloth-button">Add Clothes</button>
+          <button type="button" name="button" id="equip-button">Add Equipment</button>
+          <label for="input-box"></label>
+          <input type="text" name="" value="" id="input-box">
+          
+         
+        </div>
+        <!--       Container for both lists -->
+        <div id="lists">
+          <!--         left list, things added should have a class of `to-do-item` to get the css -->
+          <div id="to-do-list">
+            <h2>Things to Do</h2>
+            <ul id="todo"></ul>
+          </div>
+          <!--         right list, things added should have a class of `completed` -->
+          <div id="completed">
+            <h2>Things That are Done</h2>
+            <ul id="complist"></ul>
+          </div>
+        </div>
+      </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
 <script src="js/app.js" type="text/JavaScript" charset="utf-8"></script>

@@ -67,15 +67,42 @@ const getCity = () => {
 
 $( () => {
    
-});//?Ask why object troubles listener?
-// const EventHandlers = {
-//     //Listener for user input city
-//     $('form').on('submit', (event) => {
-//         event.preventDefault()
-//         $cityQuery = $('#location').val()
-//         getCity()
-//     }),
+});
+/////////////////////////////////
+//List Function
+/////////////////////////////////
+let $arrTodo = []
+let $foodarr = []
+$('#food-button').on('click', () => {
+    let value = $('#input-box').val();
+    $foodarr.push(value)
+    let $food_item = $("<div class ='food-item' type='div'>" + $foodarr[$foodarr.length - 1] + "</div>")
+    $("#todo").append($food_item);
+    $('#input-box').val("");
+})
+$('#cloth-button').on('click', () => {
+    let value = $('#input-box').val();
+    $arrTodo.push(value)
+    let $cloth_item = $("<div id ='remove-btn' type='div'>" + $arrTodo[$arrTodo.length - 1] + "</div>")
+    $("#completed").append($cloth_item);
+    $('#input-box').val("");
+    
+    $(document).on('click', ".todo-btn", function (event) {
+        let id = this.id;
+        $(event.currentTarget).attr("id", "remove-btn").removeClass("todo-btn")
+        step = ("remove")
+        $("#completed").append($(event.currentTarget) )
 
+
+        $(document).on('click', "#remove-btn", function (event) {
+            let id = this.id;
+            $(event.currentTarget).attr("id", "btn-completed").removeClass("remove-btn")
+            $("#btn-completed").remove()
+            $(step).remove()
+    
+        });
+    });
+});
 
 /////////////////////////////////
 //Table growth templet 
