@@ -75,25 +75,25 @@ let $clotharr = []
 let $foodarr = []
 let $equip_arr = []
 $('#equip-button').on('click', () => {
-    let value = $('#input-box').val();
+    let value = $('#bringing_input-box').val();
     $equip_arr.push(value)
     let $equip_item = $("<div class ='equip-item' type='div'>" + $equip_arr[$equip_arr.length - 1] + "</div>")
     $("#equip_list").append($equip_item);
-    $('#input-box').val("");
+    $('#bringing_input-box').val("");
 })
 $('#food-button').on('click', () => {
-    let value = $('#input-box').val();
+    let value = $('#bringing_input-box').val();
     $foodarr.push(value)
     let $food_item = $("<div class ='food-item' type='div'>" + $foodarr[$foodarr.length - 1] + "</div>")
     $("#food_list").append($food_item);
-    $('#input-box').val("");
+    $('#bringing_input-box').val("");
 })
 $('#cloth-button').on('click', () => {
-    let value = $('#input-box').val();
+    let value = $('#bringing_input-box').val();
     $clotharr.push(value)
     let $cloth_item = $("<div id ='cloth-item' type='div'>" + $clotharr[$clotharr.length - 1] + "</div>")
     $("#cloth_list").append($cloth_item);
-    $('#input-box').val("");
+    $('#bringing_input-box').val("");
 
         // $(document).on('click', "#remove-btn", function (event) {
         //     let id = this.id;
