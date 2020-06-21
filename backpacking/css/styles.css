@@ -6,37 +6,46 @@ html {
     -o-background-size: cover;
     background-size: cover;
     z-index: 1;
-    opacity: .95;
+    
   }
   .section {
       position: fixed;
-     /* right: 0;
-     bottom: 0;
-     min-width: 100%;
-     min-height: 100%;
-      margin-left: auto;
-      margin-right: auto; */
       z-index: -1;
+      max-width: 100%;
+      margin: auto 0;
+      text-align: center;
+      opacity: 0;
+      
   }
 nav {
     border: 5px solid rgba(0, 0, 0, 0.419);
     background-color: rgba(0, 5, 68, 0.522);
     z-index: 5;
-    margin: 0 auto;
+    font-size: 200%;
 } h1{
     color: crimson;
     border: 1px solid rgba(0, 0, 255, 0.502);
-    text-align: center;
+    text-align: center;  
+}
+h4 {
+    font-size: 150%;
+}
+#inform {
+    background-color: chartreuse;
+    border: crimson solid 1px;
+    max-width: 250px;
+    margin: auto;
     
 }
 body {
     text-align: center;
-    
+    margin: 0;
     background-size: cover;
     
 } 
 .BG_contain {
     background-color:  #ffffffac;
+    margin-top: auto;
     max-width: 1000px
     margin: 13em;
 } 
@@ -128,16 +137,22 @@ table {
 li {
     list-style-type: none;
 }
+
+@media (max-width: 800px) {
+    .section {
+        opacity: 1;
+    }
+}
 @media (max-width: 700px) {
     #location{
         width: auto; 
         
     } #bringing_input-box {
         width: auto; 
-        
     }
     
 }
+
 @media (max-width: 400px) {
     
     #location{
@@ -166,40 +181,9 @@ li {
     } */
     .section {
         position: fixed;
-        /* width: 180vh; */
-        height: 100vh;
-        margin-left: 0;
-        margin-right: 0;
-        z-index: -10;
+    }
+    video {
+        margin-left: -30rem;
     }
         
-        /* display: flex;
-        align-items: center; */
-        /* justify-content: center; */
-        /* overflow: hidden; */
     }
-    @media (min-aspect-ratio: 16/9) {
-        .section {
-        width: 100%;
-        height: auto;
-    }
-}
-@media (max-aspect-ratio: 16/9) {
-    .section {
-    width: 100%;
-    height: auto;
-}
-@media (max-aspect-ratio: 4000px) {
-    .section {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-}
-}
-@media (min-aspect-ratio: 4000px) {
-    .section {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-}
-}

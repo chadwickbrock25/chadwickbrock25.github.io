@@ -113,15 +113,3 @@ $('#cloth-button').on('click', () => {
 // $table.append("<tbody><tr><td>A3</td><td>B3</td></tr></tbody>")
 // $table.append("<tfoot><tr><td>A4</td><td>B4</td></tr></tfoot>")
 // $table.append("<tfoot><tr><td>A5</td><td>B5</td></tr></tfoot>")
-
-/////////////////////////////////
-//Animation
-/////////////////////////////////
-
-// let animation = bodymovin.loadAnimation({
-//     container: document.getElementById("anim"),
-//     rederer: "svg",
-//     loop: true,
-//     autoplay: true,
-//     path: "data.json"
-// })
