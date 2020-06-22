@@ -39,18 +39,18 @@ const getCity = () => {
             $("#container").html(`
             <h3>${weatherData.name}</h3>
             <table><thead><tr><th>Temperature</th><td>
-            ${tempF}</td></tr></thead>
+            ${tempF}F</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>
-            ${weatherData.main.humidity}</td></tr></tbody>
+            ${weatherData.main.humidity}%</td></tr></tbody>
             <tfoot><tr><th>Recommendation<br>Food & Clothes</th><td>${foodCold}</td><td>${clothCold}</td></tr></tfoot></table>
         `)
         } else if (temp > 280)
             $("#container").html(`
             <h5>${weatherData.name}</h5>
             <table><thead><tr><th>Temperature</th><td>
-            ${tempF}</td></tr></thead>
+            ${tempF}F degrees</td></tr></thead>
             <tbody><tr><th>Humidity</th><td>
-            ${weatherData.main.humidity}</td></tr></tbody>
+            ${weatherData.main.humidity}%</td></tr></tbody>
             <tfoot><tr><th>Recommendation<br>Food & Clothes</th><td>${foodHot}</td><td>${clothHot}</td></tr></tfoot></table>
         `)
         $("#container").css("opacity", "1")
@@ -58,15 +58,15 @@ const getCity = () => {
         console.log(error)
     }
 }
- //Listener for user input city
+
+
+$( () => {
+    //Listener for user input city
  $('form').on('submit', (event) => {
     event.preventDefault()
     $cityQuery = $('#location').val()
     getCity()
 })
-
-$( () => {
-   
 });
 /////////////////////////////////
 //List Function
@@ -94,22 +94,4 @@ $('#cloth-button').on('click', () => {
     let $cloth_item = $("<div id ='cloth-item' type='div'>" + $clotharr[$clotharr.length - 1] + "</div>")
     $("#cloth_list").append($cloth_item);
     $('#bringing_input-box').val("");
-
-        // $(document).on('click', "#remove-btn", function (event) {
-        //     let id = this.id;
-        //     $(event.currentTarget).attr("id", "btn-completed").removeClass("remove-btn")
-        //     $("#btn-completed").remove()
-        
-        // });
 });
-
-/////////////////////////////////
-//Table growth templet 
-/////////////////////////////////
-// $container.append($table) 
-// $table.append("<thead><tr><th>A0</th><th>B0</th></tr></thead>")
-// $table.append("<tbody><tr><td>A1</td><td>B1</td></tr></tbody>")
-// $table.append("<tfoot><tr><td>A2</td><td>B2</td></tr></tfoot>")
-// $table.append("<tbody><tr><td>A3</td><td>B3</td></tr></tbody>")
-// $table.append("<tfoot><tr><td>A4</td><td>B4</td></tr></tfoot>")
-// $table.append("<tfoot><tr><td>A5</td><td>B5</td></tr></tfoot>")

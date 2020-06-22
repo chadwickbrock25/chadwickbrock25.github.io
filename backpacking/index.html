@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    
     <title>Backpack Planning</title>
 </head>
 <body>
-    
+<!-- mobile video background -->
     <div class="section">
         <video autoplay loop muted>
             <source src="waterfall_loop.mov" type="video/mp4">
@@ -17,21 +16,25 @@
     <nav>
         <h1>Backpack Planning</h1>
     </nav>
+<!-- Process explination list -->
     <div id="inform">
-        <h4>Check weather for hiking location</h4>
-        <h4>List the items you'll bring</h4>
-        <h4>Schedule items use by day</h4>
-        <h4>Discover the order to pack your bag</h4>
-    </div>
-    <div class="BG_contain">
+        <ol>
+            <li>Check weather for hiking location</li>
+            <li>List the items you'll bring</li>
+             <li>Schedule items used by day</li>
+            <li>Discover the order to pack your bag</li>
+        </ol>
         
+    </div>
+<!-- Transparent background -->
+    <div class="BG_contain">
         <div class="container">
             <form action="/action_page.php">
                 <label for="City"><h2>Where to?:</h2></label>
                 <input type="text" id="location" name="location">
                 <h5>ex. Atlanta,US (city, country initial)</h5>
                 <input type="submit" value="Check Weather" id="weather-btn">
-                <!-- button to submit location & dates to weather api// -->
+                <!-- button to submit location & dates to weather api for future use -->
                 <!-- <label for="date">Date:</label>//Not working on this API// -->
                 <!-- <input type="date" id="date" name="trip-start"
                     value="2020-04-25"
@@ -45,26 +48,26 @@
         <div id="container">
             <h2>What're you bringing?</h2>
             <div id="input-container">
-            <!--         input and input button -->
+            <!--         input box and 3x input buttons -->
             <button type="button" name="button" id="food-button">Add Food</button>
             <button type="button" name="button" id="cloth-button">Add Clothes</button>
             <button type="button" name="button" id="equip-button">Add Equipment</button>
             <label for="input-box"></label>
             <input type="text" name="" value="" id="bringing_input-box">
             </div>
-            <!--       Container for both lists -->
+            <!--       Container for three lists -->
             <div id="lists">
-            <!--         left list, things added should have a class of `to-do-item` to get the css -->
+            <!-- top list, items added should have a class of `food_list`  -->
             <div id="food">
                 <h2>Food</h2>
                 <ul id="food_list"></ul>
             </div>
-            <!--         right list, things added should have a class of `completed` -->
+            <!--         middle list, things added should have a class of `cloth_list` -->
             <div id="clothes">
                 <h2>Clothes</h2>
                 <ul id="cloth_list"></ul>
             </div>
-            <!--         right list, things added should have a class of `equipment` -->
+            <!-- bottom list, things added should have a class of `equipment` -->
             <div id="equipment">
                 <h2>Equipment</h2>
                 <ul id="equip_list"></ul>
@@ -74,7 +77,6 @@
         <br><br>
     </div>
 </body>
-<!-- <link rel="stylesheet" href="css/styles.css"> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
 <script src="lottie.js"></script>
 <script src="js/app.js" type="text/JavaScript" charset="utf-8"></script>

@@ -8,6 +8,7 @@ html {
     z-index: 1;
     
   }
+  /* video background div */
   .section {
       position: fixed;
       z-index: -1;
@@ -27,41 +28,41 @@ nav {
     border: 1px solid rgba(0, 0, 255, 0.502);
     text-align: center;  
 }
-h4 {
-    font-size: 150%;
-}
+/* List explaining the process */
 #inform {
     background-color: chartreuse;
     border: crimson solid 1px;
-    max-width: 250px;
+    max-width: 600px;
     margin: auto;
-    
+    margin-top: 10rem;
+    font-size: 150%;
+} li {
+    font-size: 150%;
 }
+
 body {
     text-align: center;
     margin: 0;
     background-size: cover;
     
 } 
+/* transparent background */
 .BG_contain {
-    background-color:  #ffffffac;
+    background-color:  #ffffffc4;
     margin-top: auto;
     max-width: 1000px
     margin: 13em;
-} 
+}
+/* If I correct the error above my code is broken so I'm not poking the bear */
 h2{
     color: rgba(220, 20, 60, 0.44);
     border-bottom: 1px solid blue;
-    /* border-left: solid; */
-    /* border-radius: 60%; */
     text-align: center;
-    /* background-color: rgba(0, 5, 68, 0.522); */
     z-index: 1;
 }
 
 /* Location city input div */
 .container {
-    /* background-color: blue; */
     border: 3px solid rgba(0, 0, 0, 0.682);
     max-width: 750px;
     margin: 7rem 15rem;
@@ -69,6 +70,7 @@ h2{
     margin-right: auto;
 
 } 
+/* input boxes */
 #location{
     width: 42rem; 
     height: 50px; 
@@ -107,7 +109,7 @@ label {
     margin-left: auto;
     margin-right: auto;
 }h5 {
-    color: rgba(0, 0, 0, 0.337);
+    color: rgb(0, 0, 0);
     margin-bottom: 0%;
     margin-left: 18rem;
 }
@@ -121,39 +123,60 @@ table {
     margin: 0 auto;
     border: 3px solid rgba(0, 0, 0, 0.509);
     z-index: 10;
-    color: rgba(0, 0, 0, 0.509);;
+    color: rgb(0, 0, 0);
+    
 
 } thead, tbody, tr, th, td {
     border: 1px solid white;
 
 }
 .lists {
-    background-color: blue;
-    border: 3px solid orange;
     max-width: 250px;
     margin: auto;
 }
-
-li {
-    list-style-type: none;
+/* When reshaping my viewpoint I made a width adjustment every time the code broke it's container */
+@media (max-width: 1200) {
+    #inform {
+        margin: auto;
+    }
 }
-
 @media (max-width: 800px) {
     .section {
         opacity: 1;
     }
+    #inform {
+        margin: auto;
+    }
 }
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     #location{
-        width: auto; 
+        width: 25rem; 
         
     } #bringing_input-box {
-        width: auto; 
+        width: 25rem; 
     }
-    
+    #inform {
+        margin: auto;
+    }
 }
-
-@media (max-width: 400px) {
+@media (max-width: 550px) {
+    #location{
+        width: 20rem; 
+        
+    } #bringing_input-box {
+        width: 20rem; 
+    }
+    #equip-button {
+        margin-right: auto;
+    }
+    #food-button {
+        margin-left: auto;
+    } 
+    #cloth-button {
+        margin-left: auto;
+    }
+}
+@media (max-width: 430px) {
     
     #location{
         width: 20rem; 
@@ -173,17 +196,24 @@ li {
     #food-button {
         margin-left: 2rem;
     } 
-    /* #cloth-button {
-        margin-left: 2rem;
-    }
-     #equip-button {
-        margin-left: 3rem;
-    } */
     .section {
         position: fixed;
     }
     video {
         margin-left: -30rem;
     }
+    #inform {
+        margin: auto;
+    }
+}
+@media (max-width: 340px)  {
+    #location{
+        width: 18rem; 
+        margin-left: .5rem;
+        
+    } #bringing_input-box {
+        width: 18rem; 
+        margin-left: .5rem;
         
     }
+}
